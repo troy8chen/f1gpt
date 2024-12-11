@@ -6,7 +6,6 @@ interface BubbleProps {
 }
 
 export default function Bubble({ message }: BubbleProps) {
-    // Your bubble component implementation
     return (
         <div className={`bubble ${message.role}`}>
             {message.content}

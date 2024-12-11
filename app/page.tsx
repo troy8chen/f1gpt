@@ -1,14 +1,17 @@
-// page.tsx
 "use client"
 
 import { useEffect, useState } from "react"
-import { Message } from "ai"
 import Image from "next/image"
 import { useChat } from "ai/react"
 import f1GPTLogo from "./asset/f1gpt.png"
 import Bubble from "./components/Bubble"
 import LoadingBubble from "./components/LoadingBubble"
 import PromptSuggestionRow from "./components/PromptSuggestionsRow"
+
+interface ChatMessage {
+    content: string;
+    role: 'user' | 'assistant';
+}
 
 export default function Page() {
     const [isMounted, setIsMounted] = useState(false)
@@ -40,7 +43,7 @@ export default function Page() {
         try {
             await append({
                 content: promptText,
-                role: 'user',
+                role: 'user' as ChatMessage['role'],
             });
         } catch (error) {
             console.error('Error in handlePromptClick:', error);
@@ -70,7 +73,7 @@ export default function Page() {
                                 key={index}
                                 message={{
                                     content: message.content,
-                                    role: message.role as "user" | "assistant"
+                                    role: message.role as ChatMessage['role']
                                 }}
                             />
                         ))}

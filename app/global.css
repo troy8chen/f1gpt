@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(asset/background.png); /* keeping your original background */
+    background-image: url(asset/background.png);
 }
 
 main {
@@ -24,7 +24,7 @@ main {
     padding: 20px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    position: relative; /* for dots positioning */
+    position: relative;
 }
 
 section {
