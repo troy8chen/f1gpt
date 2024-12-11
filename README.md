@@ -60,11 +60,13 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Scripts
 
+```bash
 dev - Start development server
 build - Build for production
 start - Start production server
 lint - Run linter
 seed - Seed database
+```
 
 ## Learn More
 
