@@ -35,6 +35,14 @@ First, install the dependencies:
 npm install
 ```
 
+Create .env file at the same level with package.json and update the credential, these are the parameters:
+ASTRA_DB_NAMESPACE = "your_namespace"
+ASTRA_DB_COLLECTION = "your_db_name"
+ASTRA_DB_API_ENDPOINT = "your_db_api_endpoint"
+ASTRA_DB_APPLICATION_TOKEN = "your_db_token"
+OPENAI_API_KEY = "your_openai_api_key
+
+
 Run the script, but notice that the script is not efficient yet to scrape good data
 for our prompt questions. Will need to optimized it to make the chatbot functional.
 However, we have working prototype currently and the loadDb.ts will be updated.
